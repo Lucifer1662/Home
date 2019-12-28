@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/lucifer1662.github.io/static/css/main.d1b05096.chunk.css",
+    "main.js": "/lucifer1662.github.io/static/js/main.513b036a.chunk.js",
+    "main.js.map": "/lucifer1662.github.io/static/js/main.513b036a.chunk.js.map",
+    "runtime-main.js": "/lucifer1662.github.io/static/js/runtime-main.c11dd694.js",
+    "runtime-main.js.map": "/lucifer1662.github.io/static/js/runtime-main.c11dd694.js.map",
+    "static/js/2.1e818dea.chunk.js": "/lucifer1662.github.io/static/js/2.1e818dea.chunk.js",
+    "static/js/2.1e818dea.chunk.js.map": "/lucifer1662.github.io/static/js/2.1e818dea.chunk.js.map",
+    "index.html": "/lucifer1662.github.io/index.html",
+    "precache-manifest.ca167a8920523974081ff5a6ffe0cfa7.js": "/lucifer1662.github.io/precache-manifest.ca167a8920523974081ff5a6ffe0cfa7.js",
+    "service-worker.js": "/lucifer1662.github.io/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/lucifer1662.github.io/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.1e818dea.chunk.js.LICENSE": "/lucifer1662.github.io/static/js/2.1e818dea.chunk.js.LICENSE",
+    "static/media/logo.svg": "/lucifer1662.github.io/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c11dd694.js",
+    "static/js/2.1e818dea.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.513b036a.chunk.js"
+  ]
+}
