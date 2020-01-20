@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Lucifer1662/Lucifer1662.github.io/static/css/main.968359aa.chunk.css",
-    "main.js": "/Lucifer1662/Lucifer1662.github.io/static/js/main.8007b3b9.chunk.js",
-    "main.js.map": "/Lucifer1662/Lucifer1662.github.io/static/js/main.8007b3b9.chunk.js.map",
-    "runtime-main.js": "/Lucifer1662/Lucifer1662.github.io/static/js/runtime-main.ec411987.js",
-    "runtime-main.js.map": "/Lucifer1662/Lucifer1662.github.io/static/js/runtime-main.ec411987.js.map",
-    "static/js/2.758018ea.chunk.js": "/Lucifer1662/Lucifer1662.github.io/static/js/2.758018ea.chunk.js",
-    "static/js/2.758018ea.chunk.js.map": "/Lucifer1662/Lucifer1662.github.io/static/js/2.758018ea.chunk.js.map",
-    "index.html": "/Lucifer1662/Lucifer1662.github.io/index.html",
-    "precache-manifest.6926f4161de6c9a8409cd99aa4f8baef.js": "/Lucifer1662/Lucifer1662.github.io/precache-manifest.6926f4161de6c9a8409cd99aa4f8baef.js",
-    "service-worker.js": "/Lucifer1662/Lucifer1662.github.io/service-worker.js",
-    "static/css/main.968359aa.chunk.css.map": "/Lucifer1662/Lucifer1662.github.io/static/css/main.968359aa.chunk.css.map",
-    "static/js/2.758018ea.chunk.js.LICENSE": "/Lucifer1662/Lucifer1662.github.io/static/js/2.758018ea.chunk.js.LICENSE"
+    "main.css": "/Lucifer1662/MyProjects/static/css/main.968359aa.chunk.css",
+    "main.js": "/Lucifer1662/MyProjects/static/js/main.5ed4333f.chunk.js",
+    "main.js.map": "/Lucifer1662/MyProjects/static/js/main.5ed4333f.chunk.js.map",
+    "runtime-main.js": "/Lucifer1662/MyProjects/static/js/runtime-main.d71440a5.js",
+    "runtime-main.js.map": "/Lucifer1662/MyProjects/static/js/runtime-main.d71440a5.js.map",
+    "static/js/2.758018ea.chunk.js": "/Lucifer1662/MyProjects/static/js/2.758018ea.chunk.js",
+    "static/js/2.758018ea.chunk.js.map": "/Lucifer1662/MyProjects/static/js/2.758018ea.chunk.js.map",
+    "index.html": "/Lucifer1662/MyProjects/index.html",
+    "precache-manifest.42713ef96db8e521fdaaae049bc092f3.js": "/Lucifer1662/MyProjects/precache-manifest.42713ef96db8e521fdaaae049bc092f3.js",
+    "service-worker.js": "/Lucifer1662/MyProjects/service-worker.js",
+    "static/css/main.968359aa.chunk.css.map": "/Lucifer1662/MyProjects/static/css/main.968359aa.chunk.css.map",
+    "static/js/2.758018ea.chunk.js.LICENSE": "/Lucifer1662/MyProjects/static/js/2.758018ea.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.ec411987.js",
+    "static/js/runtime-main.d71440a5.js",
     "static/js/2.758018ea.chunk.js",
     "static/css/main.968359aa.chunk.css",
-    "static/js/main.8007b3b9.chunk.js"
+    "static/js/main.5ed4333f.chunk.js"
   ]
 }
