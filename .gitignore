@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+githubtoken.json
+
 # production
 /build
 
