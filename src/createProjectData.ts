@@ -1,11 +1,11 @@
 import { Octokit } from '@octokit/rest'
 import ProjectData, { Widget, WidgetData, WidgetType } from './interfaces/ProjectData';
 import { ReposGetContentResponseData } from '@octokit/types';
-import TextWidget from './interfaces/Widgets/TitleWidget';
+import TextWidget from './interfaces/Widgets/TextWidget';
 import ImageWidget from './interfaces/Widgets/ImageWidget';
-import StackPanelWidget from './interfaces/Widgets/StackPanelWidget';
+import FlexPanelWidget from './interfaces/Widgets/FlexPanelWidget';
 import RootWidget from './interfaces/Widgets/RootWidget';
-import {gitHubToken} from '../githubtoken.json'
+import { gitHubToken } from '../githubtoken.json'
 
 const fs = require('fs');
 const fetch = require("node-fetch");
@@ -39,7 +39,7 @@ function extractImage(data: any, keys?: string[]) {
     }
 }
 
-function extractStackPanel(data: any, keys?: string[]) {
+function extractFlexPanel(data: any, keys?: string[]) {
     var children = keys && keys.includes("children") ? data.children : data;
     var childrenKeys = Object.keys(children);
 
@@ -51,7 +51,6 @@ function extractStackPanel(data: any, keys?: string[]) {
 }
 
 function extractRoot(data: any, keys?: string[]) {
-    console.log({ data, keys })
     var children = keys && keys.includes("children") ? data.children : data;
     var childrenKeys = Object.keys(children);
 
@@ -69,7 +68,8 @@ let converters: { [characterName: string]: (data: any, keys?: string[]) => Widge
     "Title": extractTitle,
     "Description": extractDescripition,
     "Image": extractImage,
-    "StackPanel": extractStackPanel,
+    "FlexPanel": extractFlexPanel,
+    "StackPanel": extractFlexPanel,
     "Root": extractRoot
 
 }
@@ -85,7 +85,6 @@ function convertToWidget(type: WidgetType, data: any): Widget {
 }
 
 function resolveNames(projectName: string, widget?: Widget): string[] {
-    console.log(widget)
     if (widget === undefined)
         return [] as string[]
 
@@ -113,17 +112,19 @@ function resolveNames(projectName: string, widget?: Widget): string[] {
 async function download(url: string, fileName: string) {
     const response = await fetch(url);
     const buffer = await response.buffer();
-    console.log(fileName);
     var slashIndex = fileName.lastIndexOf('/');
     if (slashIndex !== -1) {
         var pathName = fileName.slice(0, slashIndex);
-        console.log(pathName)
         await fs.mkdir(pathName, { recursive: true }, (err: any) => {
             if (err) throw err;
+            fs.writeFile(fileName, buffer, () =>
+                console.log('finished downloading!'));
         });
+    } else {
+        fs.writeFile(fileName, buffer, () =>
+            console.log('finished downloading!'));
     }
-    await fs.writeFile(fileName, buffer, () =>
-        console.log('finished downloading!'));
+
 }
 
 async function downloadImages(images: string[], octokit: Octokit, owner: string, repo: string) {
@@ -141,7 +142,7 @@ async function downloadImages(images: string[], octokit: Octokit, owner: string,
 }
 
 async function createProjectData({ username }: any) {
-    const octokit = new Octokit({ auth:gitHubToken  });
+    const octokit = new Octokit({ auth: gitHubToken });
 
 
 
@@ -188,9 +189,9 @@ async function createProjectData({ username }: any) {
 
                 if (projectView && projectView.template) {
 
-                    projectView.template = convertToWidget(WidgetType.Root, projectView.template);
+                    project.template = convertToWidget(WidgetType.Root, projectView.template);
                     var images = resolveNames(projectView.name, projectView.template);
-                    console.log({ images })
+                   
                     await downloadImages(images, octokit, username, project.name);
 
                 }
@@ -202,6 +203,21 @@ async function createProjectData({ username }: any) {
     })
 
     await Promise.all(promises);
+
+    await Promise.all(projects.map(async (project) => {
+        var fileName = "./projectData/" + project.name + "/projectView.json";
+        var slashIndex = fileName.lastIndexOf('/');
+        if (slashIndex !== -1) {
+            var pathName = fileName.slice(0, slashIndex);
+            fs.mkdir(pathName, { recursive: true }, () => {
+                fs.writeFile(fileName, JSON.stringify(project), () => { })
+            });
+        } else {
+            fs.writeFile(fileName, project, () => { })
+        }
+
+    }))
+
 
 
     return projects;
@@ -215,7 +231,7 @@ async function run() {
 
 run();
 // let template = {
-//     "StackPanel": {
+//     "FlexPanel": {
 //         "Title": "Mandel Brot Fractal",
 //         "Description": "Renders the Mandelbrot Fractal",
 //         "Image": "img1.png"

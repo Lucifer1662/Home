@@ -1,0 +1,20 @@
+{
+    "name": "Neural Net and Visualisation",
+    "description": "Learns to map a set of 2D points to another set of 2D points. Red is the initial position, Green is the goal, Blue is the current mapping, White is the mapping of grid",
+    "gitHubLink" : "https://github.com/Lucifer1662/NeuralNet",
+    "languages": ["C++"],
+    "contents":[
+        {
+            "header":"Initial",
+            "src":"initial.png"
+        },
+        {
+            "header":"Final",
+            "src":"final.png"
+        },
+        {
+            "header":"Learning",
+            "src":"learning.gif"
+        }
+    ]
+}

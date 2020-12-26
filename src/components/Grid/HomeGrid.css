@@ -1,0 +1,16 @@
+.HomeGrid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.HomeGridElement{
+    width: 30%;
+    position: relative;
+}
+
+.ProjectPopUpMenuHomeGrid{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}

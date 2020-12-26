@@ -1,0 +1,12 @@
+{
+    "name": "Wave Sim",
+    "description": "Models the Wave Equation in 1D",
+    "gitHubLink" : "https://github.com/Lucifer1662/Lucifer1662.github.io",
+    "languages": ["C++"],
+    "contents":[
+        {
+            "header":"Simple conditions",
+            "src":"WaveSim.gif"
+        }
+    ]
+}

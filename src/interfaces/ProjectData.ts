@@ -1,28 +1,28 @@
-import StackPanelWidget from "./Widgets/StackPanelWidget";
-import TextWidget from "./Widgets/TitleWidget";
+import FlexPanelWidget from "./Widgets/FlexPanelWidget";
+import TextWidget from "./Widgets/TextWidget";
 import ImageWidget from "./Widgets/ImageWidget";
 import RootWidget from "./Widgets/RootWidget";
 
 
 
-interface ImageData{
+export interface ImageData{
     path: string,
-    title: string,
-    descripition: string,
+    title?: string,
+    descripition?: string,
 
 }
 
 export enum WidgetType {
     TextWidget = "Text",
-    ImageData = "Image",
-    StackPanel = "StackPanel",
+    Image = "Image",
+    FlexPanel = "FlexPanel",
     Title = "Title",
     Description = "Description",
     Root = "Root"
 
 }
 
-export type WidgetData = TextWidget | ImageWidget | StackPanelWidget | RootWidget;
+export type WidgetData = TextWidget | ImageWidget | FlexPanelWidget | RootWidget;
 
 export interface Widget{
     type: WidgetType,
