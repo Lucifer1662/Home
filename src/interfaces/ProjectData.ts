@@ -8,7 +8,7 @@ import RootWidget from "./Widgets/RootWidget";
 export interface ImageData{
     path: string,
     title?: string,
-    descripition?: string,
+    description?: string,
 
 }
 
