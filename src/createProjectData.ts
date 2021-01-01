@@ -16,6 +16,7 @@ interface GitHubRepo {
     html_url: string,
     created_at: string,
     updated_at: string,
+    has_pages: boolean
 
 }
 
@@ -148,26 +149,34 @@ async function createProjectData({ username }: any) {
 
 
     try {
-        var responseRepos = await octokit.repos.listForUser({
-            username: username,
+        var repos: GitHubRepo[] = [];
+        for(var i = 0; ;i++){
+            var responseRepos = await octokit.repos.listForUser({
+                username: username,
+                page: i
 
-        });
-
+            });
+            console.log()
+            //@ts-ignore
+            console.log(responseRepos.data.map(r=>r.name))
+            repos = repos.concat(responseRepos.data);
+            
+            if(responseRepos.data.length == 0)
+                break;
+        }
 
     } catch (e) {
         console.log(e)
         return []
     }
 
-    let repos: GitHubRepo[] = responseRepos.data;
-
-    let progressBool = repos.map(() => false);
-
+    
 
     let projects: ProjectData[] = repos.map(repo => ({
         name: repo.name,
         description: repo.description,
         images: [],
+        page: repo.has_pages?"https://lucifer1662.github.io/"+repo.name:undefined
     } as ProjectData));
 
     let promises = projects.map(async (project, index: number) => {
@@ -206,6 +215,7 @@ async function createProjectData({ username }: any) {
 
     await Promise.all(projects.map(async (project) => {
         var fileName = "./projectData/" + project.name + "/projectView.json";
+        console.log( project.name)
         var slashIndex = fileName.lastIndexOf('/');
         if (slashIndex !== -1) {
             var pathName = fileName.slice(0, slashIndex);

@@ -12,7 +12,7 @@ export default function ProjectImage({image} : Props){
     return <div style={{ flex: 1 }}>
         <Typography variant="h6" >{image.title}</Typography>
         <Typography variant="body2" >{image.description}</Typography>
-        <img style={{ height: '30vh' }} src={image.path} />
+        <img style={{ maxWidth: "100%", maxHeight: "30vh"}} src={image.path} />
         </div>
 }
 

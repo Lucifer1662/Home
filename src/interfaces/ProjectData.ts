@@ -33,5 +33,6 @@ export default interface ProjectData{
     name: string,
     description: string, 
     images: ImageData[],
-    template?: Widget
+    template?: Widget,
+    page?: string
 }

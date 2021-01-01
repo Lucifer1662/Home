@@ -1,46 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Widget from './components/Widgets/Widget';
-import ProjectData, { Widget as WidgetType, ImageData } from './interfaces/ProjectData';
-import Project from './Project';
-import { GridList, GridListTile, GridListTileBar, IconButton, ListSubheader } from '@material-ui/core';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-const projectList = require('./projectList.json');
-var content = require('./projects/3D-From-Scratch/content.json')
-//'./projects/3D-From-Scratch/content.json'
-console.log(content)
+import Header from './Header';
+import ProjectPage from './components/ProjectPage/ProjectPage';
+import ContactPage from './components/ContactPage/ContactPage';
 
-interface oldContent {
-  src?: string,
-  header?: string,
-  description?: string,
-}
 
-interface oldProject {
-  name: string,
-  description: string,
-  contents: oldContent[],
-  languages?: string[],
-  gitHubLink?: string
-}
 
-function convertToNew({ name, description, gitHubLink, contents, languages }: oldProject, path: string): ProjectData {
-  return {
-    name, description,
-    images: contents.map(({ header, description, src }) => ({ title: header, description, path: path + "/" + src } as ImageData))
-  }
-}
-
-console.log(projectList)
-
-var projects: ProjectData[] = projectList.map(({ path, old }: any) => old
-  ? convertToNew(require(path + "/content.json"), path)
-  : require(path + "/projectView.json"));
-
-console.log(projects)
 function App() {
-  let home = {
+
+  return (
+    <Router>
+      <div className="App">
+        <header className="App-header">
+         <Header />
+         
+         <Switch>
+          <Route path="/Projects/" exact>
+            <ProjectPage/>
+          </Route>
+          <Route path="/" exact>
+            <ProjectPage/>
+          </Route>
+          <Route path="/Contact/" exact>
+            <ContactPage/>
+          </Route>
+          </Switch>
+        </header>
+      </div>
+    </Router >
+  );
+}
+
+export default App;
+
+
+
+/*
+
+let home = {
     type: 'FlexPanel',
     data: {
       children: [
@@ -69,27 +73,6 @@ function App() {
   ];
 
 
-  var projectCompoents = projects.map(project => <Project data={project} />)
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Widget widget={home} />
-        <div style={{
-          marginLeft: "30%", marginRight: "30%",
-          width: "90%"
-        }}>
-          <GridList cellHeight={300} cols={3} >
-            {projects.map((project) => (
-              <GridListTile  cols={1}>
-                <Project data={project} />
-              </GridListTile>
 
-            ))}
-          </GridList>
-        </div>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+   <Widget widget={home} />
+  */
