@@ -27,7 +27,7 @@ export default function DefaultProject({ project }: Props) {
                 </CardContent>
                 
             </Card>
-            {page && <iframe allow="camera; microphone" src={page} style={{width:"100%", height: "90vh", border:0}}/> }
+            {page && <iframe allow="camera; microphone; fullscreen" src={page} style={{width:"100%", height: "90vh", border:0}} /> }
         </div>
     </div>
 }
