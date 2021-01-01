@@ -1,0 +1,23 @@
+{
+    "name": "Physics Engine",
+    "description": "A 2D Physics Engine, my succesful atempt at creating a impulse physics engine",
+    "gitHubLink" : "https://github.com/Lucifer1662/Engine",
+    "languages": ["C++"],
+    "contents":[
+        {
+            "header":"Version 2",
+            "description": "The current stage of the engine, with different geometries",
+            "src":"test2.gif"
+        },
+        {
+            "header":"Version 1",
+            "description": "Testing non-aligned collision and repulsion",
+            "src":"no angle.gif"
+        },
+        {
+            "header":"Version 1",
+            "description": "Trying to add angular momentum",
+            "src":"angle.gif"
+        }
+    ]
+}
