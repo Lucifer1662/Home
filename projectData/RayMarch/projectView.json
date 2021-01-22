@@ -1,0 +1,16 @@
+{
+    "name": "RayMarch",
+    "description": "This is a website that can render RayMarched scenes to produce 3D fractals. Written in c++ and using WebGL and WASM. The goal of this project was to create a Node based input (like Blenders shader nodes) to produce fractals in a user friendly manner.",
+    "images": [
+      
+        {
+            "title": "Testing reflection",
+            "description": "4 spheres but at the cost of 2! 2 spheres are rendered on the right and xyz space is reflected.",
+            "path": "spheres.png"
+        },
+        {
+            "title": "What I have learnt",
+            "description": "This project has taught me the complexities of integrating c++ in the browser using emscripten. Building a single page web app from scratch, so I learnt about Webpack and bundling. Integrating React into an existing project, without 'create react app'."
+        }
+    ]
+}

@@ -1,1 +1,11 @@
-{"name":"Over-Hooked","description":"A game created during Graphics and interaction about fishing","images":[],"page":"https://lucifer1662.github.io/Over-Hooked"}
+{
+    "name": "Over-Hooked",
+    "description": "A game created during Graphics and interaction about fishing",
+    "images": [
+        {
+            "path": "Rod Casting.gif",
+            "exclude": true
+        }
+    ],
+    "page": "https://lucifer1662.github.io/Over-Hooked"
+}

@@ -1,1 +1,10 @@
-{"name":"min-max-tic-tac-toe","description":null,"images":[]}
+{
+    "name": "min-max-tic-tac-toe",
+    "description": null,
+    "images": [
+        {
+            "path": "screen.png",
+            "title": "Playing against the AI"
+        }
+    ]
+}

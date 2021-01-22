@@ -1,1 +1,16 @@
-{"name":"GUI-Framework","description":"An opengl GUIframework","images":[]}
+{
+    "name": "GUI Frame Work",
+    "description": "An OpenGL GUI Framework, with text rendering, text input and buttons",
+    "gitHubLink" : "https://github.com/Lucifer1662/GUI-Framework",
+    "languages": ["C++"],
+    "images":[
+        {
+            "title":"Text Input",
+            "path":"textinput.gif"
+        },
+        {
+            "title":"Button",
+            "path":"button.gif"
+        }
+    ]
+}

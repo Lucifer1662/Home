@@ -9,6 +9,7 @@ export interface ImageData{
     path: string,
     title?: string,
     description?: string,
+    exclude?: boolean,
 
 }
 
@@ -34,5 +35,9 @@ export default interface ProjectData{
     description: string, 
     images: ImageData[],
     template?: Widget,
-    page?: string
+    page?: string,
+    pdf?: string,
+    languages?: any[],
+    frameworks?: any[],
+    gitHubLink?: string,
 }

@@ -1,1 +1,13 @@
-{"name":"3D-From-Scratch","description":"A basic 3D rendering application using AMP to run c++ code on the GPU and without using OpenGL or DirectX","images":[]}
+{
+    "name": "3D From Scratch",
+    "description": "A basic 3D rendering application using AMP to run c++ code on the GPU and without using OpenGL or DirectX",
+    "gitHubLink" : "https://github.com/Lucifer1662/3D-From-Scratch",
+    "languages": ["C++"],
+    "images":[
+        {
+            "title":"A cube with only 2 sides conditions",
+            "description": "The  sides makes it easier to see the rotation",
+            "path":"Rotation3SideCube.gif"
+        }
+    ]
+}

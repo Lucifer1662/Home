@@ -20,11 +20,11 @@ export default function AppDrawer() {
         <div>
             <Divider />
             <List>
-                <ListItem button onClick={toProjects(history)}>
+                <ListItem button onClick={()=>{toProjects(history)(); headerState.close();}}>
                     <ListItemIcon><CodeIcon /></ListItemIcon>
                     <ListItemText primary={'Projects'} />
                 </ListItem>
-                <ListItem button onClick={toAboutMe(history)}>
+                <ListItem button onClick={()=>{toAboutMe(history)(); headerState.close();}}>
                     <ListItemIcon> <PersonIcon /> </ListItemIcon>
                     <ListItemText primary={'About Me'} />
                 </ListItem>
@@ -33,11 +33,11 @@ export default function AppDrawer() {
 
             <Divider />
             <List>
-                <ListItem button onClick={toResume(history)}>
+                <ListItem button onClick={()=>{toResume(history)(); headerState.close();}}>
                     <ListItemIcon><DescriptionIcon /> </ListItemIcon>
                     <ListItemText primary={'Resume'} />
                 </ListItem>
-                <ListItem button onClick={toContact(history)}>
+                <ListItem button onClick={()=>{toContact(history)(); headerState.close();}}>
                     <ListItemIcon><MailIcon /></ListItemIcon>
                     <ListItemText primary={'Contact'} />
                 </ListItem>
@@ -62,7 +62,7 @@ export default function AppDrawer() {
         }}>
 
 
-            <IconButton onClick={() => { headerState.close() }}>
+            <IconButton onClick={() => { headerState.close(); }}>
                 <ChevronLeftIcon />
             </IconButton>
         </div>

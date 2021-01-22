@@ -1,30 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ProjectData from '../../interfaces/ProjectData';
 import Project from '../../Project';
 import { GridList, GridListTile } from '@material-ui/core';
 import DefaultProject from '../../DefaultProject'
-
-import scrollToComponent from '../../scrollToComponentTop';
 import CollapseOnEnter from '../../CollapseOnEnter';
-import projects from '../../ProjectData';
+import { useProjects } from '../../ProjectData';
+import useWindowSize from './../../useWindowSize';
+import { FilterButtons } from './FilterButtons';
+
+
+function AddProjectPage({ project }: { project: ProjectData }) {
+    const myRef = useRef<HTMLDivElement | null>(null)
+    useEffect(() => { myRef?.current?.scrollIntoView() }, [myRef]);
+    return <div
+        ref={myRef}
+        style={{ marginTop: 10, marginBottom: 10 }}> <CollapseOnEnter> <DefaultProject project={project} /> </CollapseOnEnter>
+    </div>
+}
 
 
 function AddProjectPageBelow(project: ProjectData[], index: number, cols: number, selected: number) {
-    console.log(index)
     if (index % cols == 0 && index <= selected && selected < index + cols) {
-        console.log({ index })
-        return <div style={{ height: undefined, width: "100%" }}>{addProjectPage(project[selected])}</div>;
+        return <div style={{ height: undefined, width: "100%" }}><AddProjectPage project={project[selected]} /></div>;
     }
     return [];
 }
 
 
-function addProjectPage(project: ProjectData) {
 
-    return <div
-        ref={scrollToComponent(10)}
-        style={{ marginTop: 10, marginBottom: 10 }}> <CollapseOnEnter> <DefaultProject project={project} /> </CollapseOnEnter></div>
-}
 
 
 
@@ -32,10 +35,14 @@ function addProjectPage(project: ProjectData) {
 export default function ProjectPage() {
 
     const [selectedProject, setSelectedProject] = useState<undefined | number>(undefined);
+    const projects = useProjects();
+    const size = useWindowSize();
 
+    const aspect = size ? size.width / size.height : 1;
 
+    const cols = Math.max(1, Math.floor(3 * aspect));
 
-    const cols = 3;
+    const cellHeight = size ? size.width / cols : 300;
 
     var tiles: any[] = []
     {
@@ -46,8 +53,8 @@ export default function ProjectPage() {
                 tiles.push(projectPages);
             }
             // if(index != selectedProject)
-            tiles.push(<GridListTile cols={1}>
-                <Project data={project} onClick={() => {
+            tiles.push(<GridListTile key={project.name + "grid"} cols={1}>
+                <Project key={project.name + "project"} data={project} onClick={() => {
                     if (selectedProject == index)
                         setSelectedProject(undefined);
                     else
@@ -58,14 +65,18 @@ export default function ProjectPage() {
         })
     }
 
-    return (<div style={{
-        marginLeft: "30%", marginRight: "30%",
-        width: "90%"
-    }}>
-        <GridList cellHeight={300} cols={cols} >
-            {tiles}
-        </GridList>
-    </div>
+    return (
+        <div style={{display:'flex', flexDirection: 'column', alignItems: 'center' }} >
+            <FilterButtons/>
+            <br/>
+            <GridList
+
+                cellHeight={cellHeight} cols={cols}
+                style={{ justifyContent: 'center', width: "90%", overflow: 'unset' }}
+            >
+                {tiles}
+            </GridList>
+        </div>
     );
 }
 

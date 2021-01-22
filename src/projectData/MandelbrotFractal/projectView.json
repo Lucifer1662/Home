@@ -1,1 +1,0 @@
-{"name":"MandelbrotFractal","description":null,"images":[],"template":{"type":"Root","data":{"children":[{"type":"StackPanel","data":{"children":[{"type":"Title","data":{"text":"Mandel Brot Fractal","variants":"h1"}},{"type":"Description","data":{"text":"Renders the Mandelbrot Fractal","variants":"p"}},{"type":"Image","data":{"path":"img1.png"}}]}}]}}}

@@ -10,30 +10,40 @@ import {
 import Header from './Header';
 import ProjectPage from './components/ProjectPage/ProjectPage';
 import ContactPage from './components/ContactPage/ContactPage';
+import ResumePage from './components/ResumePage/ResumePage';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 
-
+const theme = createMuiTheme({
+  palette: { type: 'dark',  }
+});
 
 function App() {
 
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-         <Header />
-         
-         <Switch>
-          <Route path="/Projects/" exact>
-            <ProjectPage/>
-          </Route>
-          <Route path="/" exact>
-            <ProjectPage/>
-          </Route>
-          <Route path="/Contact/" exact>
-            <ContactPage/>
-          </Route>
-          </Switch>
-        </header>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100vh'}}>
+          <Header />
+          <div className="App-header">
+
+
+            <Switch>
+              <Route path="/Projects/" exact>
+                <ProjectPage />
+              </Route>
+              <Route path="/" exact>
+                <ProjectPage />
+              </Route>
+              <Route path="/Contact/" exact>
+                <ContactPage />
+              </Route>
+              <Route path="/Resume/" exact>
+                <ResumePage />
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </ThemeProvider>
     </Router >
   );
 }

@@ -1,0 +1,1 @@
+{"name":"Hand Written Number Recognition","description":"A website that can recognise handwritten digits. This uses tensflow.js linear algebra library, but the model and the training (back propagation) was hand coded.","images":[{"path":"/projectData/Hand Written Number Recognition/3.png"}],"page":"https://lucifer1662.github.io/Hand-written-number-recognition"}

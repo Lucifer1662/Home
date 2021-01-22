@@ -1,0 +1,17 @@
+{
+    "name": "Madelbrot Fractal",
+    "description": "Renders madelbrot Fractal using AMP and opengl",
+    "gitHubLink" : "https://github.com/Lucifer1662/MadelbrotFractal",
+    "languages": ["C++"],
+    "images":[
+        {
+            "path":"img1.png"
+        },
+        {
+            "path":"img2.png"
+        },
+        {
+            "path":"img3.png"
+        }
+    ]
+}

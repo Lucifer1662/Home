@@ -1,0 +1,17 @@
+export default  [
+    "testProject",
+    "CatalystApp",
+    "crawler-tester",
+    "digital-window",
+    "EmployeeSchedule",
+    "Engine",
+    "EventLib",
+    "FightingGame",
+    "MyPortfolioWebsite",
+    "react-card-flip",
+    "ReactTypeApp",
+    "Read3D",
+    "SDLEngine",
+    "wave-sim",
+    "AI-Py",
+]

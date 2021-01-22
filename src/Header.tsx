@@ -8,17 +8,18 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 export default function Header() {
     return <HeaderContextProvider>
-        <HeaderAppBar/>
+        <HeaderAppBar />
     </HeaderContextProvider>
 
 }
 
 function HeaderAppBar() {
-    const headerState = useHeaderContext(); 
-    return <AppBar position="static">
+    const headerState = useHeaderContext();
+
+    return <AppBar position="relative">
 
         <Toolbar>
-            <IconButton edge="start" color="inherit" aria-label="menu" onClick={()=> headerState.open()} >
+            <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => headerState.open()} >
                 <MenuIcon />
             </IconButton>
             <Typography variant="h6">

@@ -1,6 +1,8 @@
-import ProjectData, {ImageData} from "./interfaces/ProjectData";
+import { useEffect, useState } from "react";
+import ProjectData, { ImageData } from "./interfaces/ProjectData";
 
-const projectList = require('./projectList.json');
+const projectList = require('./projectList.json') as { path: string, old?: boolean }[];
+
 
 const pathSuffix = "./"
 
@@ -21,16 +23,39 @@ interface oldProject {
 function convertToNew({ name, description, gitHubLink, contents, languages }: oldProject, path: string): ProjectData {
     return {
         name, description,
-        images: contents.map(({ header, description, src }) => ({ title: header, description, path: "/"+path + "/" + src } as ImageData))
+        images: contents.map(({ header, description, src }) => ({ title: header, description, path: "/" + path + "/" + src } as ImageData))
     }
 }
 
-console.log(projectList)
 
-var projects: ProjectData[] = projectList.map(({ path, old }: any) => old
-    ? convertToNew(require(path + "/content.json"), path)
-    : require(path + "/projectView.json"));
 
-console.log(projects)
+export function useProjects() {
+    const [projects, setProjects] = useState<ProjectData[]>([]);
 
-export default projects;
+    useEffect(() => {
+
+        
+       
+
+        projectList.filter(p => p.old).map(
+            async ({ path, old }: any) => {
+                var response = await fetch("/" +path + "/content.json");
+                var json = convertToNew(await response.json(), path);
+                setProjects((prev) => [...prev, json])
+            }
+        );
+
+        projectList.filter(p => !p.old).map(
+            async ({ path, old }: any) => {
+                var response = await fetch("/" +path + "/projectView.json");
+                var json = await response.json();
+                setProjects((prev) => [...prev, json])
+            }
+        );
+
+
+    }, []);
+
+    return projects;
+
+}

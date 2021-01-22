@@ -1,1 +1,10 @@
-{"name":"Flocking-Simulation","description":"A simulation to emulate the flocking of birds","images":[]}
+{
+    "name": "Flocking Simulation",
+    "description": "A 2D application that tries to simulate the flocking behaviour seen in birds using SFML",
+    "gitHubLink" : "https://github.com/Lucifer1662/Flocking-Simulation",
+    "images":[
+        {
+            "path":"flocking.gif"
+        }
+    ]
+}
