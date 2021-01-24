@@ -1,0 +1,11 @@
+{
+    "name": "Spotter",
+    "description": "A website that can count your reps",
+    "images": [
+        {
+            "title": "Counting My Reps",
+            "path": "/projectData/Spotter/repLow.gif"
+        }
+    ],
+    "page": "https://lucifer1662.github.io/Spotter"
+}

@@ -1,0 +1,1 @@
+{"name":"Flocking Simulation","description":"A 2D application that tries to simulate the flocking behaviour seen in birds using SFML","gitHubLink":"https://github.com/Lucifer1662/Flocking-Simulation","images":[{"path":"/projectData/Flocking-Simulation/flocking.gif"}],"languages":["C++"],"frameworks":["SFML"]}

@@ -1,0 +1,1 @@
+{"name":"Machine Learning GPU","description":"A convolutional neural network written in C++ using OpenGL to utilize the GPU","gitHubLink":"https://github.com/Lucifer1662/MachineLearningGpu","languages":["C++"],"images":[{"title":"Classify EMNIST data set of handwitten digits","path":"/projectData/MachineLearningGpu/MachineLearningNumbers.png"}]}
