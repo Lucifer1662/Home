@@ -39,15 +39,6 @@ class HeaderActions extends HeaderState {
     close() {if(this.setState) this.setState(HeaderActionsReducer.close);}
 }
 
-
-
-
-function reducer(state: HeaderState, action: (arg0: HeaderState) => HeaderState) {
-    return action(state);
-}
-
-
-
 export const HeaderContext = createContext(new HeaderActions());
 
 export function HeaderContextProvider(props: { children: ReactNode, value?: HeaderState }) {

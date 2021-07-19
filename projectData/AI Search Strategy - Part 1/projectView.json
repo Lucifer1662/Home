@@ -7,5 +7,6 @@
             "exclude": "true"
         }
     ],
-    "pdf": "aireport.pdf"
+    "pdf": "aireport.pdf",
+    "languages": ["python"]
 }

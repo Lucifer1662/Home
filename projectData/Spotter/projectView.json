@@ -7,5 +7,7 @@
             "path": "repLow.gif"
         }
     ],
-    "page": "https://lucifer1662.github.io/Spotter"
+    "page": "https://lucifer1662.github.io/Spotter",
+    "languages": ["Typescript", "Javascript"],
+    "frameworks": ["React", "tensorflow", "node.js"]
 }

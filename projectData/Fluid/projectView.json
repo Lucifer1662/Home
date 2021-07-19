@@ -7,5 +7,6 @@
         {
             "path":"flow1.gif"
         }
-    ]
+    ],
+    "frameworks": ["OpenGL"]
 }

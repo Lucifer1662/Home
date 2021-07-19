@@ -1,1 +1,11 @@
-{"name":"Cannibals and Missionaries","description":"A python script to search and solve the cannibal and missionary problem and print out a set of steps to solve. Created when learning about search strategies in AI","images":[{"path":"steps.png","title":"The steps to a solve the problem"}]}
+{
+    "name": "Cannibals and Missionaries",
+    "description": "A python script to search and solve the cannibal and missionary problem and print out a set of steps to solve. Created when learning about search strategies in AI",
+    "images": [
+        {
+            "path": "steps.png",
+            "title": "The steps to a solve the problem"
+        }
+    ],
+    "languages": ["python"]
+}

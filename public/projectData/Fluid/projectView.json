@@ -1,1 +1,1 @@
-{"name":"Fluid Simulation","description":"Tries to model fluid flow using the navier stoke equations","gitHubLink":"https://github.com/Lucifer1662/Fluid-Simulation","languages":["C++"],"images":[{"path":"/projectData/Fluid/flow1.gif"}]}
+{"name":"Fluid Simulation","description":"Tries to model fluid flow using the navier stoke equations","gitHubLink":"https://github.com/Lucifer1662/Fluid-Simulation","languages":["C++"],"images":[{"path":"/projectData/Fluid/flow1.gif"}],"frameworks":["OpenGL"]}

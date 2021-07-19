@@ -6,5 +6,11 @@
             "path": "development.png",
             "description": "Debugging block visibility"
         }
+    ],
+    "languages": [
+        "C++"
+    ],
+    "frameworks": [
+        "OpenGL"
     ]
 }

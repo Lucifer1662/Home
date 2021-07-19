@@ -8,5 +8,6 @@
             "title":"Simple conditions",
             "path":"WaveSim.gif"
         }
-    ]
+    ],
+    "frameworks": ["OpenGL"]
 }

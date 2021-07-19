@@ -37,7 +37,7 @@ export function ResumeViewer() {
                 renderMode={"svg"}
             >
                 {!loaded && <Skeleton variant="rect" width={skeletonWidth} height={skeletonHeight} /> }
-                <Page onLoadSuccess={()=> setLoaded(true) }  renderMode={loaded?undefined:'none'} pageNumber={pageNumber} width={pageWidth} />
+                <Page onLoadSuccess={()=> setLoaded(true) } renderAnnotationLayer={false} renderMode={loaded?undefined:'none'} pageNumber={pageNumber} width={pageWidth} />
             </Document>
         </div>
     );

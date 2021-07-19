@@ -12,5 +12,7 @@
             "title": "What I have learnt",
             "description": "This project has taught me the complexities of integrating c++ in the browser using emscripten. Building a single page web app from scratch, so I learnt about Webpack and bundling. Integrating React into an existing project, without 'create react app'."
         }
-    ]
+    ],
+    "languages": ["Typescript", "Javascript", "C++"],
+    "frameworks": ["React", "emscripten", "Webpack"]
 }

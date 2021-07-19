@@ -13,5 +13,6 @@
         {
             "path":"img3.png"
         }
-    ]
+    ],
+    "frameworks": ["OpenGL", "AMP"]
 }

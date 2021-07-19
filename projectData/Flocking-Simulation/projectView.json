@@ -6,5 +6,7 @@
         {
             "path":"flocking.gif"
         }
-    ]
+    ],
+    "languages": ["C++"],
+    "frameworks":["SFML"]
 }

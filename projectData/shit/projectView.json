@@ -1,1 +1,6 @@
-{"name":"shit","description":"like git but shit","images":[]}
+{
+    "name": "shit",
+    "description": "like git but shit",
+    "images": [],
+    "languages": ["C++"]
+}

@@ -6,5 +6,6 @@
             "path": "screen.png",
             "title": "Playing against the AI"
         }
-    ]
+    ],
+    "languages": ["Python"]
 }

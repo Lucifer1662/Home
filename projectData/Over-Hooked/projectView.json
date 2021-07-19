@@ -7,5 +7,7 @@
             "exclude": true
         }
     ],
-    "page": "https://lucifer1662.github.io/Over-Hooked"
+    "page": "https://lucifer1662.github.io/Over-Hooked",
+    "languages": ["C#"],
+    "frameworks": ["Unity3D"]
 }

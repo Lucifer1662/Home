@@ -33,10 +33,6 @@ export function useProjects() {
     const [projects, setProjects] = useState<ProjectData[]>([]);
 
     useEffect(() => {
-
-        
-       
-
         projectList.filter(p => p.old).map(
             async ({ path, old }: any) => {
                 var response = await fetch("/" +path + "/content.json");

@@ -12,5 +12,6 @@
             "title":"Button",
             "path":"button.gif"
         }
-    ]
+    ],
+    "framework": ["OpenGL"]
 }
